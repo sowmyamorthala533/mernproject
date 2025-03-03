@@ -1,0 +1,153 @@
+{
+  "images": [
+    {
+      "url": "https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg",
+      "price": "\u20B910,000",
+      "ItemType": "Furniture",
+      "Item": "Wooden Dining Table",
+      "Date": "Mon, Aug 23 2024",
+      "Location":"Telangana"
+    },
+    {
+      "url": "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg",
+      "price": "\u20B950,000",
+      "ItemType": "Electronics",
+      "Item": "Sony 55-inch LED TV",
+      "Date": "Tue, Sep 10 2024",
+      "Location":"Telangana"
+    },
+    {
+      "url": "https://images.pexels.com/photos/100653/pexels-photo-100653.jpeg",
+      "price": "\u20B920,499",
+      "ItemType": "Vehicle",
+      "Item": "Honda Activa 5G Scooter",
+      "Date": "Wed, Oct 5 2024",
+      "Location":"Telangana"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+      "price": "\u20B93,000,000",
+      "ItemType": "Real Estate",
+      "Item": "3BHK Apartment in Bangalore",
+      "Date": "Fri, Nov 15 2024",
+      "Location":"Andhra Pradesh"
+    },
+    {
+      "url": "https://wallpapercave.com/wp/wp8497529.jpg",
+      "price": "\u20B975,000",
+      "ItemType": "Vehicle",
+      "Item": "Royal Enfield Classic 350",
+      "Date": "Sun, Dec 1 2024",
+      "Location":"Andhra Pradesh"
+    },
+    {
+      "url": "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg",
+      "price": "\u20B910,500",
+      "ItemType": "Furniture",
+      "Item": "Sofa Set (3+1+1)",
+      "Date": "Mon, Jan 8 2025",
+      "Location":"Andhra Pradesh"
+    },
+    {
+      "url": "https://cdni.autocarindia.com/ExtraImages/20210303103038_Maruti_Suzuki_Swift_2021_tracking.jpg",
+      "price": "\u20B950,000",
+      "ItemType": "Vehicle",
+      "Item": "Maruti Suzuki Swift (2018 Model)",
+      "Date": "Wed, Feb 20 2025",
+      "Location":"Andhra Pradesh"
+    },
+    {
+      "url": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg",
+      "price": "\u20B915,000",
+      "ItemType": "Electronics",
+      "Item": "LG 1.5 Ton Split AC",
+      "Date": "Sat, Mar 15 2025",
+      "Location":"Kerala"
+    },
+    {
+      "url": "https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg",
+      "price": "\u20B990,000",
+      "ItemType": "Real Estate",
+      "Item": "2BHK House for Rent in Mumbai",
+      "Date": "Mon, Apr 1 2025",
+      "Location":"Delhi"
+    },
+    {
+      "url": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg",
+      "price": "\u20B940,000",
+      "ItemType": "Furniture",
+      "Item": "King Size Bed with Mattress",
+      "Date": "Thu, May 10 2025",
+      "Location":"Karnataka"
+    },
+    {
+      "url": "https://tse1.mm.bing.net/th?id=OIP.AGsKaJI_KoQXjEZbMsQMjAHaHa&pid=Api&P=0&h=180",
+      "price": "\u20B920,000",
+      "ItemType": "Electronics",
+      "Item": "Samsung Double Door Refrigerator",
+      "Date": "Sun, Jun 5 2025",
+      "Location":"Delhi"
+    },
+    {
+      "url": "https://dyimg1.realestateindia.com/prop_images/90346/953029_1.jpg",
+      "price": "\u20B9500,000",
+      "ItemType": "Real Estate",
+      "Item": "Commercial Shop for Rent",
+      "Date": "Tue, Jul 14 2025",
+      "Location":"Delhi"
+    },
+    {
+      "url": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg",
+      "price": "\u20B930,000",
+      "ItemType": "Vehicle",
+      "Item": "Yamaha FZ V3",
+      "Date": "Thu, Aug 22 2025",
+      "Location":"Kerela"
+    },
+    {
+      "url": "https://images.pexels.com/photos/276563/pexels-photo-276563.jpeg",
+      "price": "\u20B920,500",
+      "ItemType": "Furniture",
+      "Item": "Office Chair & Desk",
+      "Date": "Mon, Sep 30 2025",
+      "Location":"Mumbai"
+    },
+    {
+      "url":"https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2019/09/xps-13-2in1-7390-2.jpg",
+      "price": "\u20B920,000",
+      "ItemType": "Electronics",
+      "Item": "Dell XPS 13 Laptop",
+      "Date": "Sat, Oct 25 2025",
+      "Location":"Mumbai"
+    },
+    {
+      "url": "https://images.pexels.com/photos/461941/pexels-photo-461941.jpeg",
+      "price": "\u20B93,000,000",
+      "ItemType": "Real Estate",
+      "Item": "Independent House in Hyderabad",
+      "Date": "Tue, Nov 12 2025"
+    },
+    {
+      "url": "https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg",
+      "price": "\u20B965,499",
+      "ItemType": "Electronics",
+      "Item": "Apple MacBook Air",
+      "Date": "Fri, Dec 19 2025"
+    },
+    {
+      "url": "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+      "price": "\u20B970,000",
+      "ItemType": "Furniture",
+      "Item": "Modular Kitchen Set",
+      "Date": "Sun, Jan 4 2026"
+    },
+    {
+      "url": "https://images.pexels.com/photos/193667/pexels-photo-193667.jpeg",
+      "price": "\u20B930,999",
+      "ItemType": "Vehicle",
+      "Item": "Hyundai i20 (2017 Model)",
+      "Date": "Thu, Feb 15 2026"
+    }
+  ]
+}
+
