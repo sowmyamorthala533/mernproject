@@ -2,152 +2,428 @@
   "images": [
     {
       "url": "https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg",
-      "price": "\u20B910,000",
+      "price": "₹10,000",
       "ItemType": "Furniture",
       "Item": "Wooden Dining Table",
       "Date": "Mon, Aug 23 2024",
-      "Location":"Telangana"
+      "Location": "Hyderabad",
+      "id": "54fe",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "material": "Solid Oak Wood",
+        "dimensions": "180cm x 90cm x 75cm (L x W x H)",
+        "seating_capacity": "6 Persons",
+        "finish": "Polished with Natural Varnish",
+        "warranty": "5 Years Manufacturer Warranty"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg",
-      "price": "\u20B950,000",
+      "price": "₹50,000",
       "ItemType": "Electronics",
       "Item": "Sony 55-inch LED TV",
       "Date": "Tue, Sep 10 2024",
-      "Location":"Telangana"
+      "Location": "Hyderabad",
+      "id": "89b2",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "display_type": "4K Ultra HD LED",
+        "resolution": "3840 x 2160 pixels",
+        "smart_features": "Android TV OS, Built-in Wi-Fi",
+        "connectivity": "4 HDMI, 3 USB, Bluetooth 5.0",
+        "sound_output": "20W Dolby Digital Sound"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/100653/pexels-photo-100653.jpeg",
-      "price": "\u20B920,499",
+      "price": "₹20,499",
       "ItemType": "Vehicle",
       "Item": "Honda Activa 5G Scooter",
       "Date": "Wed, Oct 5 2024",
-      "Location":"Telangana"
+      "Location":"Hyderabad",
+      "id": "362b",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "mileage": "55 kmpl",
+        "engine_capacity": "110 cc",
+        "fuel_tank_capacity": "5.3 liters",
+        "color": "Pearl White",
+        "kerb_weight": "109 kg"
+      }
     },
     {
       "url": "https://images.unsplash.com/photo-1560184897-ae75f418493e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
-      "price": "\u20B93,000,000",
+      "price": "₹3,000,000",
       "ItemType": "Real Estate",
       "Item": "3BHK Apartment in Bangalore",
       "Date": "Fri, Nov 15 2024",
-      "Location":"Andhra Pradesh"
+      "Location": "Bangalore",
+      "id": "5afe",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "carpet_area": "1250 sq ft",
+        "furnishing": "Semi-furnished",
+        "floor": "5th floor out of 10",
+        "amenities": "Swimming Pool, Gym, Children's Play Area",
+        "parking": "2 Covered Parking Spaces"
+      }
     },
     {
       "url": "https://wallpapercave.com/wp/wp8497529.jpg",
-      "price": "\u20B975,000",
+      "price": "₹75,000",
       "ItemType": "Vehicle",
       "Item": "Royal Enfield Classic 350",
       "Date": "Sun, Dec 1 2024",
-      "Location":"Andhra Pradesh"
+      "Location": "Bangalore",
+      "id": "08ab",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "mileage": "35 kmpl",
+        "engine_capacity": "349 cc",
+        "fuel_tank_capacity": "13 liters",
+        "color": "Stealth Black",
+        "kerb_weight": "195 kg"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg",
-      "price": "\u20B910,500",
+      "price": "₹10,500",
       "ItemType": "Furniture",
       "Item": "Sofa Set (3+1+1)",
       "Date": "Mon, Jan 8 2025",
-      "Location":"Andhra Pradesh"
+      "Location": "Banglore",
+      "id": "4939",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "material": "Premium Leatherette",
+        "dimensions": "3-Seater: 180cm, 1-Seater: 90cm width",
+        "color": "Brown with Beige Accents",
+        "filling": "High-Density Foam with Spring Support",
+        "warranty": "3 Years on Structure, 1 Year on Upholstery"
+      }
     },
     {
       "url": "https://cdni.autocarindia.com/ExtraImages/20210303103038_Maruti_Suzuki_Swift_2021_tracking.jpg",
-      "price": "\u20B950,000",
+      "price": "₹50,000",
       "ItemType": "Vehicle",
       "Item": "Maruti Suzuki Swift (2018 Model)",
       "Date": "Wed, Feb 20 2025",
-      "Location":"Andhra Pradesh"
+      "Location": "Banglore",
+      "id": "42d6",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "fuel_type": "Petrol",
+        "engine_capacity": "1197 cc",
+        "transmission": "Manual",
+        "mileage": "22 kmpl",
+        "kilometers_driven": "45,000 km",
+        "color": "Metallic Red"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg",
-      "price": "\u20B915,000",
+      "price": "₹15,000",
       "ItemType": "Electronics",
       "Item": "LG 1.5 Ton Split AC",
       "Date": "Sat, Mar 15 2025",
-      "Location":"Kerala"
+      "Location": "Kerala",
+      "id": "5019",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "capacity": "1.5 Ton",
+        "energy_rating": "5 Star",
+        "cooling_capacity": "5300 watts",
+        "special_features": "Dual Inverter, Auto Clean, Wi-Fi Connectivity",
+        "warranty": "1 Year Comprehensive, 5 Years on Compressor"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/439391/pexels-photo-439391.jpeg",
-      "price": "\u20B990,000",
+      "price": "₹90,000",
       "ItemType": "Real Estate",
       "Item": "2BHK House for Rent in Mumbai",
       "Date": "Mon, Apr 1 2025",
-      "Location":"Delhi"
+      "Location": "Kerala",
+      "id": "7b28",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "carpet_area": "850 sq ft",
+        "furnishing": "Fully Furnished",
+        "floor": "3rd floor out of 7",
+        "amenities": "24/7 Security, Power Backup, Lift",
+        "locality": "Prime Residential Area with Good Connectivity"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg",
-      "price": "\u20B940,000",
+      "price": "₹40,000",
       "ItemType": "Furniture",
       "Item": "King Size Bed with Mattress",
       "Date": "Thu, May 10 2025",
-      "Location":"Karnataka"
+      "Location": "Kerala",
+      "id": "d9b1",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "material": "Engineered Wood with Teak Finish",
+        "dimensions": "198cm x 183cm (King Size)",
+        "mattress_type": "Memory Foam with Pocket Springs (10 inch)",
+        "storage": "Hydraulic Storage Under the Bed",
+        "warranty": "5 Years on Bed, 10 Years on Mattress"
+      }
     },
     {
       "url": "https://tse1.mm.bing.net/th?id=OIP.AGsKaJI_KoQXjEZbMsQMjAHaHa&pid=Api&P=0&h=180",
-      "price": "\u20B920,000",
+      "price": "₹20,000",
       "ItemType": "Electronics",
       "Item": "Samsung Double Door Refrigerator",
       "Date": "Sun, Jun 5 2025",
-      "Location":"Delhi"
+      "Location":"Kerala",
+      "id": "812b",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "capacity": "253 Liters",
+        "energy_rating": "3 Star",
+        "cooling_technology": "Frost Free with Digital Inverter",
+        "special_features": "Convertible Freezer, Twin Cooling Plus",
+        "warranty": "1 Year Comprehensive, 10 Years on Compressor"
+      }
     },
     {
       "url": "https://dyimg1.realestateindia.com/prop_images/90346/953029_1.jpg",
-      "price": "\u20B9500,000",
+      "price": "₹500,000",
       "ItemType": "Real Estate",
       "Item": "Commercial Shop for Rent",
       "Date": "Tue, Jul 14 2025",
-      "Location":"Delhi"
+      "Location": "Kerala",
+      "id": "93e3",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "carpet_area": "450 sq ft",
+        "floor": "Ground Floor",
+        "frontage": "15 feet with Glass Front",
+        "location_advantage": "Main Commercial Street with High Footfall",
+        "facilities": "24/7 Power Backup, Water Supply, Security"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg",
-      "price": "\u20B930,000",
+      "price": "₹30,000",
       "ItemType": "Vehicle",
       "Item": "Yamaha FZ V3",
       "Date": "Thu, Aug 22 2025",
-      "Location":"Kerela"
+      "Location": "Kerela",
+      "id": "ee1e",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "engine_capacity": "149 cc",
+        "mileage": "45 kmpl",
+        "fuel_tank_capacity": "13 liters",
+        "color": "Metallic Black",
+        "kilometers_driven": "15,000 km",
+        "features": "LED Headlights, Digital Console, Disc Brakes"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/276563/pexels-photo-276563.jpeg",
-      "price": "\u20B920,500",
+      "price": "₹20,500",
       "ItemType": "Furniture",
       "Item": "Office Chair & Desk",
       "Date": "Mon, Sep 30 2025",
-      "Location":"Mumbai"
+      "Location": "Chennai",
+      "id": "22a3",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "chair_material": "Mesh Back with Cushioned Seat",
+        "desk_material": "Engineered Wood with Laminate Finish",
+        "desk_dimensions": "120cm x 60cm x 75cm (L x W x H)",
+        "ergonomics": "Adjustable Chair Height, Armrests, and Lumbar Support",
+        "warranty": "2 Years on Both Items"
+      }
     },
     {
-      "url":"https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2019/09/xps-13-2in1-7390-2.jpg",
-      "price": "\u20B920,000",
+      "url": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2019/09/xps-13-2in1-7390-2.jpg",
+      "price": "₹20,000",
       "ItemType": "Electronics",
       "Item": "Dell XPS 13 Laptop",
       "Date": "Sat, Oct 25 2025",
-      "Location":"Mumbai"
+      "Location": "Chennai",
+      "id": "3c35",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "processor": "Intel Core i5 11th Gen",
+        "ram": "8GB DDR4",
+        "storage": "512GB SSD",
+        "display": "13.3-inch FHD InfinityEdge Display",
+        "battery": "12 Hours Battery Life",
+        "os": "Windows 11 Home"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/461941/pexels-photo-461941.jpeg",
-      "price": "\u20B93,000,000",
+      "price": "₹3,000,000",
       "ItemType": "Real Estate",
       "Item": "Independent House in Hyderabad",
-      "Date": "Tue, Nov 12 2025"
+      "Date": "Tue, Nov 12 2025",
+      "Location": "Chennai",
+      "id": "36b7",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "plot_area": "1800 sq ft",
+        "built_up_area": "2400 sq ft (G+1)",
+        "bedrooms": "4 Bedrooms with Attached Bathrooms",
+        "features": "Modular Kitchen, Garden, Car Parking, CCTV",
+        "locality": "Gated Community with Club House and Park"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/276554/pexels-photo-276554.jpeg",
-      "price": "\u20B965,499",
+      "price": "₹65,499",
       "ItemType": "Electronics",
       "Item": "Apple MacBook Air",
-      "Date": "Fri, Dec 19 2025"
+      "Date": "Fri, Dec 19 2025",
+      "id": "b686",
+      "Location": "Chennai",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "processor": "Apple M1 Chip",
+        "ram": "8GB Unified Memory",
+        "storage": "256GB SSD",
+        "display": "13.3-inch Retina Display",
+        "battery": "Up to 18 Hours Battery Life",
+        "os": "macOS Monterey"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
-      "price": "\u20B970,000",
+      "price": "₹70,000",
       "ItemType": "Furniture",
       "Item": "Modular Kitchen Set",
-      "Date": "Sun, Jan 4 2026"
+      "Date": "Sun, Jan 4 2026",
+      "id": "2986",
+      "Location": "Chennai",
+      "seller": "Seller Details",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "material": "Marine Plywood with Laminate Finish",
+        "units": "Base Units, Wall Units, Tall Units",
+        "countertop": "Granite Countertop (Black Galaxy)",
+        "appliances": "Hob, Chimney, and Sink Included",
+        "warranty": "10 Years on Cabinets, 1 Year on Hardware"
+      }
     },
     {
       "url": "https://images.pexels.com/photos/193667/pexels-photo-193667.jpeg",
-      "price": "\u20B930,999",
+      "price": "₹30,999",
       "ItemType": "Vehicle",
       "Item": "Hyundai i20 (2017 Model)",
-      "Date": "Thu, Feb 15 2026"
+      "Date": "Thu, Feb 15 2026",
+      "id": "cef0",
+      "seller": "Seller Details",
+      "Location": "Hyderabad",
+      "Name": "john",
+      "ph_no": 12334,
+      "description": {
+        "fuel_type": "Petrol",
+        "engine_capacity": "1197 cc",
+        "transmission": "Manual",
+        "mileage": "18 kmpl",
+        "kilometers_driven": "65,000 km",
+        "color": "Silver",
+        "features": "Touchscreen Infotainment, Reverse Camera"
+      }
+    },
+    {
+      "id": "1741589048580",
+      "ItemType": "Vehicle",
+      "Item": "Car",
+      "price": "₹30,999",
+      "url": "blob:http://localhost:5176/f4d18f50-ce02-45e5-8e5c-88cf303f5600",
+      "seller": "Seller Details",
+      "Name": "john",
+      "Location": "Chennai",
+      "ph_no": 12334,
+      "description": {
+        "make": "Volkswagen",
+        "model": "Polo",
+        "year": "2016",
+        "fuel_type": "Diesel",
+        "engine_capacity": "1498 cc",
+        "transmission": "Manual",
+        "mileage": "21 kmpl",
+        "kilometers_driven": "72,000 km"
+      }
+    },
+    {
+      "id": "1741589932853",
+      "ItemType": "Vehicle",
+      "Item": "car",
+      "price": "₹30,999",
+      "url": "blob:http://localhost:5178/a6c49b37-a127-485b-99bf-735daecd68f0",
+      "seller": "Seller Details",
+      "Name": "john",
+      "Location": "Chennai",
+      "ph_no": 12334,
+      "description": {
+        "make": "Honda",
+        "model": "City",
+        "year": "2018",
+        "fuel_type": "Petrol",
+        "engine_capacity": "1498 cc",
+        "transmission": "Automatic",
+        "mileage": "17 kmpl",
+        "kilometers_driven": "40,000 km"
+      }
+    },
+    {
+      "id": "1741773283105",
+      "ItemType": "Furniture",
+      "Item": "sofa",
+      "price": "10000",
+      "Location": "Kerala",
+      "url": "blob:https://spectacular-concha-602307.netlify.app/839481be-0a8b-4974-bfcb-4498678b3058",
+      "description": {
+        "material": "Fabric Upholstery",
+        "seating_capacity": "3-Seater",
+        "color": "Grey",
+        "cushions": "High-Density Foam with Fiber Fill",
+        "frame": "Solid Wood Frame with Spring Support",
+        "warranty": "2 Years Manufacturer Warranty"
+      }
     }
   ]
 }
-

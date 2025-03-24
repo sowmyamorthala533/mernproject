@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Navbar, Nav, Form, InputGroup, Carousel } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
-// Add custom CSS to handle the transparent navbar dropdown
 const customNavbarStyle = {
   navbarCollapse: {
     backgroundColor: 'transparent !important'
@@ -88,11 +86,7 @@ const RenewMartLandingPage = () => {
             <i className="bi bi-arrow-repeat me-2"></i>
             Renew Mart
           </Navbar.Brand>
-          
-          {/* Navbar Toggle for Mobile View */}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          
-          {/* Navbar Links with transparent background */}
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="gap-3">
               <Nav.Link href="#home">Home</Nav.Link>

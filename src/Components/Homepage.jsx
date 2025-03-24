@@ -1,16 +1,16 @@
 import React from 'react'
 import { BrowserRouter, Router } from 'react-router-dom'
-import Header from './Header/Header'
-import Banner from './Banner/Banner'
-import Cards from "../components/Cards/Cards";
+// import Header from './Header/Header'
+// import Banner from './Banner/Banner'
+import Cards from "../Components/Cards/Cards";
 import Footer from './Footer/Footer'
 const Homepage = () => {
   return (
     <>
-      <Header/>
-      <Banner/>
-       <Cards/>
-       <Footer/>
+    <div className="w-100 min-vh-100 d-flex flex-column">
+      <Cards />
+      <Footer />
+    </div>
    </>
   )
 }

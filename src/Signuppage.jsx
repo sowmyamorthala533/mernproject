@@ -1,59 +1,65 @@
+
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useAuth } from "../AuthContext";
-import "../Auth.css";
-
-const Login = () => {
+import { useAuth } from "./AuthContext";
+import "./Auth.css";
+const Signuppage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const { login, loginWithGoogle, loginWithGithub } = useAuth();
+  const { signup, loginWithGoogle, loginWithGithub } = useAuth();
   const navigate = useNavigate();
 
-  const handleEmailPasswordLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
+    
+    if (password !== confirmPassword) {
+      return setError("Passwords do not match");
+    }
+    
     try {
       setError("");
       setLoading(true);
-      await login(email, password);
+      await signup(email, password);
       navigate("/routingpage");
     } catch (err) {
-      setError("Failed to log in: " + err.message);
+      setError("Failed to create an account: " + err.message);
     }
     setLoading(false);
   };
 
-  const handleGoogleLogin = async () => {
+  const handleGoogleSignup = async () => {
     try {
       setError("");
       setLoading(true);
       await loginWithGoogle();
       navigate("/routingpage");
     } catch (err) {
-      setError("Failed to log in with Google: " + err.message);
+      setError("Failed to sign up with Google: " + err.message);
     }
     setLoading(false);
   };
 
-  const handleGithubLogin = async () => {
+  const handleGithubSignup = async () => {
     try {
       setError("");
       setLoading(true);
       await loginWithGithub();
       navigate("/routingpage");
     } catch (err) {
-      setError("Failed to log in with GitHub: " + err.message);
+      setError("Failed to sign up with GitHub: " + err.message);
     }
     setLoading(false);
   };
 
   return (
-    <div className="login-container">
-      <h2>Login to Your Account</h2>
+    <div className="signup-container">
+      <h2>Create New Account</h2>
       {error && <div className="error-message">{error}</div>}
       
-      <form onSubmit={handleEmailPasswordLogin}>
+      <form onSubmit={handleSignup}>
         <div className="form-group">
           <label>Email</label>
           <input 
@@ -71,11 +77,23 @@ const Login = () => {
             value={password} 
             onChange={(e) => setPassword(e.target.value)} 
             required 
+            minLength="6"
           />
         </div>
         
-        <button type="submit" disabled={loading} className="login-btn">
-          Login
+        <div className="form-group">
+          <label>Confirm Password</label>
+          <input 
+            type="password" 
+            value={confirmPassword} 
+            onChange={(e) => setConfirmPassword(e.target.value)} 
+            required 
+            minLength="6"
+          />
+        </div>
+        
+        <button type="submit" disabled={loading} className="signup-btn">
+          Sign Up
         </button>
       </form>
       
@@ -85,27 +103,27 @@ const Login = () => {
       
       <div className="social-login-buttons">
         <button 
-          onClick={handleGoogleLogin} 
+          onClick={handleGoogleSignup} 
           disabled={loading} 
           className="google-btn"
         >
-          Login with Google
+          Sign up with Google
         </button>
         
         <button 
-          onClick={handleGithubLogin} 
+          onClick={handleGithubSignup} 
           disabled={loading} 
           className="github-btn"
         >
-          Login with GitHub
+          Sign up with GitHub
         </button>
       </div>
       
-      <div className="signup-link">
-        Don't have an account? <Link to="/signup">Sign up</Link>
+      <div className="login-link">
+        Already have an account? <Link to="/login">Login</Link>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Signuppage;
