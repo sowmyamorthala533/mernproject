@@ -11,7 +11,7 @@ const Routingpage = () => {
     <>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="product/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sell" element={<Sell />} />  {/* ✅ Added Sell Page Route */}
       </Routes>

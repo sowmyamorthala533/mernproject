@@ -1,5 +1,5 @@
 import React from 'react';
-const Footer = () => {
+const FooterName = () => {
   return (
     <footer className="bg-success text-white py-5 mt-5">
       <div className="container">
@@ -95,4 +95,4 @@ const styles = `
 }
 `;
 
-export default Footer;
+export default FooterName;
