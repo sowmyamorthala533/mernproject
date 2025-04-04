@@ -125,8 +125,8 @@ app.get("/product/:id", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch product details" });
   }
 });
-
+const PORT = 3000 || 5000
 // Start the server
-app.listen(3000, () => {
-  console.log(" Server is running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });

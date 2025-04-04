@@ -17,7 +17,7 @@ const Cards = () => {
   const fetchItemsByLocation = async (location) => {
     try {
       // Use the new endpoint with location query parameter
-      const res = await fetch(`http://localhost:3000/products?location=${location}`);
+      const res = await fetch(`https://mernproject-9zje.onrender.com/products?location=${location}`);
       const data = await res.json();
       
       setItems(data.items);
