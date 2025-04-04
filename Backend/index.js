@@ -1,199 +1,132 @@
-const express = require("express")
-const connectDB = require("./db.js")
-const itemModel = require("./models/item.js")
-const cors = require("cors")
-const multer = require("multer")
-const path = require("path")
 
-const app = express()
-app.use(express.json())
-app.use(cors())
-app.use('/uploads', express.static('uploads')) 
+require("dotenv").config();
+const express = require("express");
+const connectDB = require("./db.js");
+const itemModel = require("./models/item.js");
+const cors = require("cors");
+const multer = require("multer");
+const cloudinary = require("cloudinary").v2;
+const path = require("path");
+const fs = require("fs");
+ // Load environment variables
 
-connectDB()
-                                                                 // remove uploads login --url
-// cloudinary images  // frontend---> img (multer acces image)--> cloudinary (image store)--> url 
+const app = express();
+app.use(express.json());
+app.use(cors());
 
+connectDB();
+
+// Cloudinary configuration using environment variables
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
+
+
+// Ensure uploads folder exists
+const uploadsDir = path.join(__dirname, "uploads");
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir);
+}
+
+// Multer Storage (store locally before Cloudinary upload)
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/')
+    cb(null, uploadsDir);
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname)) 
-  }
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
 });
 const upload = multer({ storage: storage });
 
+// Fetch all products
 app.get("/", async (req, res) => {
-    const response = await itemModel.find()
-    return res.json({items: response})
-})
-
-app.post("/add-product", upload.single('image'), async (req, res) => {
-    try {
-
-        const newProduct = new itemModel({
-            ItemType: req.body.ItemType,
-            Item: req.body.Item,
-            price: req.body.price,
-            Location: req.body.Location,
-            description: req.body.description,
-            url: req.file ? `https://mernproject-ktcy.onrender.com/uploads/${req.file.filename}` : '',
-            Date: new Date().toISOString()
-        });
-
-        // Save to database
-        const savedProduct = await newProduct.save();
-        res.status(201).json(savedProduct);
-    } catch (error) {
-        console.error("Error adding product:", error);
-        res.status(500).json({ error: "Failed to add product" });
-    }
+  try {
+    const response = await itemModel.find();
+    res.json({ items: response });
+  } catch (error) {
+    console.error(" Error fetching products:", error);
+    res.status(500).json({ error: "Failed to fetch products" });
+  }
 });
 
-//get product by location
+// Add product with image upload
+app.post("/add-product", upload.single("image"), async (req, res) => {
+  try {
+    let imageUrl = "";
+
+    console.log("Uploading product:", req.body);
+
+    if (req.file) {
+      console.log(" Image file received:", req.file.filename);
+      const result = await cloudinary.uploader.upload(req.file.path);
+      console.log(" Cloudinary upload result:", result);
+      imageUrl = result.secure_url;
+      fs.unlinkSync(req.file.path); // Remove local file
+    } else {
+      console.warn(" No image file uploaded!");
+    }
+
+    const { ItemType, Item, price, Location, description } = req.body;
+
+    if (!ItemType || !Item || !price || !Location) {
+      return res.status(400).json({ error: "All required fields must be filled!" });
+    }
+
+    const newProduct = new itemModel({
+      ItemType,
+      Item,
+      price,
+      Location,
+      description: description || "",
+      url: imageUrl,
+      Date: new Date().toISOString(),
+    });
+
+    const savedProduct = await newProduct.save();
+    res.status(201).json(savedProduct);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to add product" });
+  }
+});
+
+// Search products by filters
 app.get("/products", async (req, res) => {
   try {
-      const { location } = req.query;
-      
-      if (!location || location === "All Locations") {
-          const response = await itemModel.find();
-          return res.json({ items: response });
-      }
+    const { location, itemType } = req.query;
+    const query = {};
 
-      
-      const response = await itemModel.find({ 
-          Location: { $regex: new RegExp(location, "i") } 
-      });
+    if (location && location !== "All Locations") {
+      query.Location = { $regex: new RegExp(location, "i") };
+    }
+    if (itemType) {
+      query.ItemType = { $regex: new RegExp(itemType, "i") };
+    }
 
-      return res.json({ items: response });
+    const response = await itemModel.find(query);
+    res.json({ items: response });
   } catch (error) {
-      console.error("Error fetching products by location:", error);
-      res.status(500).json({ error: "Failed to fetch products" });
+    res.status(500).json({ error: "Failed to fetch products" });
   }
 });
 
 // Get product by ID
 app.get("/product/:id", async (req, res) => {
-    try {
-        const product = await itemModel.findById(req.params.id);
-        if (!product) {
-            return res.status(404).json({ error: "Product not found" });
-        }
-        res.json(product);
-    } catch (error) {
-        res.status(500).json({ error: "Error fetching product details" });
+  try {
+    const product = await itemModel.findById(req.params.id);
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
     }
+    res.json(product);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch product details" });
+  }
 });
 
-
-  
-
+// Start the server
 app.listen(3000, () => {
-    console.log("app is running")
-})
-
-//////////////////////////////////////////this ismy multer code actual
-
-// const express = require("express");
-// const connectDB = require("./db.js");
-// const itemModel = require("./models/item.js");
-// const cors = require("cors");
-// const multer = require("multer");
-// const cloudinary = require("cloudinary").v2;
-// const path = require("path");
-// const fs = require("fs");
-
-// const app = express();
-// app.use(express.json());
-// app.use(cors());
-
-// connectDB();
-
-// // Cloudinary configuration
-// cloudinary.config({
-//   cloud_name: "dlls9cbxd",
-//   api_key: "775339493857268",
-//   api_secret: "clouds"
-// });
-// console.log("cloudanary config")
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-//     cb(null, 'uploads/')
-//   },
-//   filename: function (req, file, cb) {
-//     cb(null, Date.now() + path.extname(file.originalname)) 
-//   }
-// });
-// const upload = multer({ storage: storage });
-
-// app.get("/", async (req, res) => {
-//   const response = await itemModel.find();
-//   return res.json({ items: response });
-// });
-
-// app.post("/add-product", upload.single('image'), async (req, res) => {
-//   try {
-//     let imageUrl = '';
-
-//     if (req.file) {
-//       const result = await cloudinary.uploader.upload(req.file.path);
-//       imageUrl = result.secure_url;
-//       fs.unlinkSync(req.file.path); // Delete file after uploading
-//     }
-
-//     const newProduct = new itemModel({
-//       ItemType: req.body.ItemType,
-//       Item: req.body.Item,
-//       price: req.body.price,
-//       Location: req.body.Location,
-//       description: req.body.description,
-//       url: imageUrl,
-//       Date: new Date().toISOString()
-//     });
-
-//     const savedProduct = await newProduct.save();
-//     res.status(201).json(savedProduct);
-//   } catch (error) {
-//     console.error("Error adding product:", error);
-//     res.status(500).json({ error: "Failed to add product" });
-//   }
-// });
-
-// // Get product by location
-// app.get("/products", async (req, res) => {
-//   try {
-//     const { location } = req.query;
-    
-//     if (!location || location === "All Locations") {
-//       const response = await itemModel.find();
-//       return res.json({ items: response });
-//     }
-
-//     const response = await itemModel.find({ 
-//       Location: { $regex: new RegExp(location, "i") } 
-//     });
-
-//     return res.json({ items: response });
-//   } catch (error) {
-//     console.error("Error fetching products by location:", error);
-//     res.status(500).json({ error: "Failed to fetch products" });
-//   }
-// });
-
-// // Get product by ID
-// app.get("/product/:id", async (req, res) => {
-//   try {
-//     const product = await itemModel.findById(req.params.id);
-//     if (!product) {
-//       return res.status(404).json({ error: "Product not found" });
-//     }
-//     res.json(product);
-//   } catch (error) {
-//     res.status(500).json({ error: "Error fetching product details" });
-//   }
-// });
-
-// app.listen(3000, () => {
-//   console.log("app is running");
-// });
+  console.log(" Server is running on http://localhost:3000");
+});
